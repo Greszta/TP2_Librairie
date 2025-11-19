@@ -1,2 +1,9 @@
 URL : https://github.com/Greszta/TP2_Librairie/tree/main/TP2/mvc
 
+Administrateur
+    username: Harper
+    password: 123456
+
+Client
+    username: Arthur
+    password: 123456

@@ -1,4 +1,4 @@
-{{ include('layouts/header.php', {title:'Client Create'})}}
+{{ include('layouts/header.php', {title:'Livre Create'})}}
     <div class="formulaire">
         <div class="contenu">
             <form method="post">

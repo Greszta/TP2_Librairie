@@ -1,5 +1,23 @@
-{{ include('layouts/header.php', {title:'Client Create'})}}
-    <div class="formulaire">
+{{ include('layouts/header.php', {title:'Livre Create'})}}
+<div class="conteneur-erreur">
+                        {% if errors.titre is defined %}
+                            <span class="error">{{ errors.titre }}</span>
+                        {% endif %}
+                        {% if errors.annee is defined %}
+                            <span class="error">{{ errors.annee }}</span>
+                        {% endif %}
+                        {% if errors.auteur_id is defined %}
+                            <span class="error">{{ errors.auteur_id }}</span>
+                        {% endif %}
+                        {% if errors.etat_id is defined %}
+                            <span class="error">{{ errors.etat_id }}</span>
+                        {% endif %}
+                        {% if errors.categorie_id is defined %}
+                            <span class="error">{{ errors.categorie_id }}</span>
+                        {% endif %}
+                </div>    
+<div class="formulaire">
+
         <div class="contenu">
             <form method="post">
                 <h2>Nouveau Livre</h2>
@@ -28,7 +46,6 @@
                 <label>État
                     <select name="etat_id">
                         <option value="">Select</option>
-
                         {% for etat in etats %}
                             <option value="{{ etat.id }}" {% if etat.id == livre.etat_id %} selected {% endif %}>{{ etat.etat }}</option>
                         {% endfor %}
@@ -37,22 +54,5 @@
                 <input type="submit" class="btn" value="Save">
             </form>
         </div>
-        <div class="conteneur-erreur">
-                        {% if errors.titre is defined %}
-                            <span class="error">{{ errors.titre }}</span>
-                        {% endif %}
-                        {% if errors.annee is defined %}
-                            <span class="error">{{ errors.annee }}</span>
-                        {% endif %}
-                        {% if errors.auteur_id is defined %}
-                            <span class="error">{{ errors.auteur_id }}</span>
-                        {% endif %}
-                        {% if errors.etat_id is defined %}
-                            <span class="error">{{ errors.etat_id }}</span>
-                        {% endif %}
-                        {% if errors.categorie_id is defined %}
-                            <span class="error">{{ errors.categorie_id }}</span>
-                        {% endif %}
-                </div>
     </div>
 {{ include('layouts/footer.php')}}

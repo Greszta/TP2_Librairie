@@ -74,7 +74,7 @@ class LivreController{
         $etat = new Etat;
         $selectEtat = $etat->select('etat');
         
-        return View::render('livre/create', ['auteurs'=>$selectAuteur, 'categories'=>$selectCategorie, 'etat'=>$selectEtat]);
+        return View::render('livre/create', ['auteurs'=>$selectAuteur, 'categories'=>$selectCategorie, 'etats'=>$selectEtat]);
     }
     
     public function store($data){
@@ -123,7 +123,7 @@ class LivreController{
                 return View::render('livre/edit', ['livre'=> $selectId, 'auteurs'=>$selectAuteur, 'categories'=>$selectCategorie, 'etats'=>$selectEtat]);
                 
             }else{
-                return View::render('error', ['msg'=>'Client not found!']);
+                return View::render('error', ['msg'=>'Livre not found!']);
             }
             
         }else{

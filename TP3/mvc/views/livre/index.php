@@ -1,4 +1,4 @@
-{{ include('layouts/header.php', {title:'Client List'})}}
+{{ include('layouts/header.php', {title:'Livre List'})}}
 
 <div class="page">
     <div class="tableau">
@@ -18,7 +18,9 @@
             </table>
     </div>
         <br><br>
+        {% if session.privilege_id == 1%}
         <a href="{{base}}/livre/create" class="btn">Nouveau Livre</a>
+        {% endif %}
 </div>
 
     {{ include('layouts/footer.php')}}

@@ -1,4 +1,4 @@
 <?php
-define('BASE', '/TP2/mvc');
-define('ASSET', '/TP2/mvc/public/');
+define('BASE', '/TP3/mvc');
+define('ASSET', '/TP3/mvc/public/');
 ?>

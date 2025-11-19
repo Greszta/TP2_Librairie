@@ -13,13 +13,22 @@
             <div class="navigation">
                 <div class="gauche">
                     <a href="{{base}}/livres">Livres</a>
-                    <a href="">Users</a>
+                    {% if session.privilege_id == 1%}
+                    <a href="{{base}}/users">Users</a>
+                    {% endif%}
                 </div>
                 <div class="droite">
-                    <a href="">Login</a>
+                    {%if guest %}
+                    <a href="{{base}}/login">Login</a>
+                    {% else %}
+                    <a href="{{base}}/logout">Logout</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </nav>
     <main>
+        {%if guest is empty %}
+            Bienvenue {{ session.user_name }}
+        {% endif %}
     
