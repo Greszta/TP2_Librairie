@@ -1,4 +1,4 @@
-URL : https://github.com/Greszta/TP2_Librairie/tree/main/TP2/mvc
+URL : https://github.com/Greszta/TP2_Librairie
 
 Administrateur
     username: Harper
